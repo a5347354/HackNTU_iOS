@@ -12,6 +12,7 @@
 		3148B4621DC8ADD300D45C16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3148B4601DC8ADD300D45C16 /* Main.storyboard */; };
 		3148B4641DC8ADD300D45C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3148B4631DC8ADD300D45C16 /* Assets.xcassets */; };
 		3148B4671DC8ADD300D45C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3148B4651DC8ADD300D45C16 /* LaunchScreen.storyboard */; };
+		D4C1875C216B09C929855A8B /* Pods_TableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E69E72406935E3673794116 /* Pods_TableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		3148B4631DC8ADD300D45C16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3148B4661DC8ADD300D45C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3148B4681DC8ADD300D45C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E69E72406935E3673794116 /* Pods_TableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6A1136FA93A81CE783E739 /* Pods-TableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableView/Pods-TableView.release.xcconfig"; sourceTree = "<group>"; };
+		AE2E57EA0A061F5457AD5120 /* Pods-TableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableView/Pods-TableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C1875C216B09C929855A8B /* Pods_TableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				3148B45B1DC8ADD300D45C16 /* TableView */,
 				3148B45A1DC8ADD300D45C16 /* Products */,
+				50460A9E4DD393201EAA6183 /* Pods */,
+				A236A9A3AC92EB3706F88AAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		50460A9E4DD393201EAA6183 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE2E57EA0A061F5457AD5120 /* Pods-TableView.debug.xcconfig */,
+				8E6A1136FA93A81CE783E739 /* Pods-TableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A236A9A3AC92EB3706F88AAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E69E72406935E3673794116 /* Pods_TableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3148B46B1DC8ADD300D45C16 /* Build configuration list for PBXNativeTarget "TableView" */;
 			buildPhases = (
+				72B5802517A8C2ACB63404A1 /* [CP] Check Pods Manifest.lock */,
 				3148B4551DC8ADD200D45C16 /* Sources */,
 				3148B4561DC8ADD200D45C16 /* Frameworks */,
 				3148B4571DC8ADD200D45C16 /* Resources */,
+				FDF2F6A63B10491EBABD6327 /* [CP] Embed Pods Frameworks */,
+				6F2AAE6C920A5C5DAB555C3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F2AAE6C920A5C5DAB555C3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView/Pods-TableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B5802517A8C2ACB63404A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDF2F6A63B10491EBABD6327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView/Pods-TableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3148B4551DC8ADD200D45C16 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		3148B46C1DC8ADD300D45C16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE2E57EA0A061F5457AD5120 /* Pods-TableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2AFX2LXKDW;
@@ -270,6 +346,7 @@
 		};
 		3148B46D1DC8ADD300D45C16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E6A1136FA93A81CE783E739 /* Pods-TableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2AFX2LXKDW;

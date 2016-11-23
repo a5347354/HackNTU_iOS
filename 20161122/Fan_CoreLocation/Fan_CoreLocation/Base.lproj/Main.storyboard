@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fan_CoreLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4De-J2-5hG"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iqg-Te-IAq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="A9D-59-wn7"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Start" id="udC-Dr-MEt">
+                                        <connections>
+                                            <action selector="pressStart:" destination="BYZ-38-t0r" id="DvQ-v3-DNt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4WT-Qd-pcw"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ug2-gA-LvB"/>
+                                    <barButtonItem title="Stop" id="N7X-H9-G9L">
+                                        <connections>
+                                            <action selector="pressStop:" destination="BYZ-38-t0r" id="jpH-NC-wpv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2u-ds-iDV">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="l2u-ds-iDV" secondAttribute="height" multiplier="85:21" id="6eL-5K-nhn"/>
+                                    <constraint firstAttribute="width" constant="85" id="X7l-wQ-Qtg"/>
+                                    <constraint firstAttribute="height" constant="21" id="ncD-Of-2gj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4De-J2-5hG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IXl-3j-Mtm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Iqg-Te-IAq" secondAttribute="bottom" id="TAP-5z-9WH"/>
+                            <constraint firstItem="l2u-ds-iDV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="bkh-qD-xfv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4De-J2-5hG" secondAttribute="bottom" id="eYc-Nx-6OL"/>
+                            <constraint firstAttribute="trailing" secondItem="Iqg-Te-IAq" secondAttribute="trailing" id="gJh-fY-Swb"/>
+                            <constraint firstItem="Iqg-Te-IAq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hu4-mc-4jC"/>
+                            <constraint firstItem="Iqg-Te-IAq" firstAttribute="top" secondItem="l2u-ds-iDV" secondAttribute="bottom" constant="14" id="lUp-pV-kVT"/>
+                            <constraint firstItem="4De-J2-5hG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lkr-m4-sPY"/>
+                            <constraint firstAttribute="trailing" secondItem="4De-J2-5hG" secondAttribute="trailing" id="yH3-CD-c5s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMap" destination="4De-J2-5hG" id="XLC-ug-aDw"/>
+                        <outlet property="startLabel" destination="l2u-ds-iDV" id="34y-cV-97M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

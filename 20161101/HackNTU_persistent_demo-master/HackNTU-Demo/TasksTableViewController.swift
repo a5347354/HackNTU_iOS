@@ -13,12 +13,16 @@ class TasksTableViewController: UITableViewController {
     
     var listData: [String]?
     @IBOutlet weak var addTask: UIBarButtonItem!
+    let realm = try! Realm()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //設定TableViewCell
         self.tableView.register(CustomTableViewCell.classForCoder(), forCellReuseIdentifier: "customCell")
+        
+        setup()
         }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,6 +31,7 @@ class TasksTableViewController: UITableViewController {
         let realm = try! Realm()
         
         let allTasks = realm.objects(Task.self)
+        self.tableView.reloadData()
         print(allTasks)
     }
     
@@ -54,16 +59,21 @@ class TasksTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return listData!.count
+        
+        let allTasks = self.realm.objects(Task.self)
+        
+        return allTasks.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
-
-        // Configure the cell...
         
-        cell.textLabel?.text = listData![indexPath.row]
+        //把資料讀出來
+        let allTasks = self.realm.objects(Task.self)
+        
+        // Configure the cell...
+        cell.textLabel?.text = allTasks[indexPath.row].name
 
         return cell
     }
